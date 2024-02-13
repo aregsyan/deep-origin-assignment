@@ -28,7 +28,12 @@ export class SchemaService {
     const jsonSchema = new Draft07(schema, {
       resolveRef: resolveRefMerge,
     });
-    const parsedSchema = jsonSchema.getSchema();
+    const { allOf, $defs, ...restSchema } =
+      jsonSchema.getSchema() as JsonSchema;
+    const parsedSchema = {
+      ...restSchema,
+      properties: { ...$defs },
+    };
     return this.schemaRepository.add({
       schemaUrl,
       schema: parsedSchema as Record<string, unknown>,
