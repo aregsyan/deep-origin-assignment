@@ -17,7 +17,7 @@ function SchemaForm(props: SchemaFormProps) {
       <Form
         schema={props.schema}
         validator={validator}
-        onSubmit={({ formData }: { formData: Record<string, unknown>}) => props.onSubmit(formData)}
+        onSubmit={({ formData }) => props.onSubmit(formData)}
         templates={{ WrapIfAdditionalTemplate: SchemField }}
       />
     </>

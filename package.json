@@ -1,0 +1,20 @@
+{
+  "name": "deep-origin-assignment",
+  "version": "1.0.0",
+  "scripts": {
+    "lint:backend": "eslint backend/**/*.ts",
+    "lint:frontend": "eslint frontend/**/*.ts"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/prettier": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3"
+  }
+}

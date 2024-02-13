@@ -15,7 +15,7 @@ export const SchemField = (props: WrapIfAdditionalTemplateProps) => {
   const { schema, children, classNames, style } = props;
 
   const content = useMemo(() => {
-    const icon = schema.fa_icon ? <FontAwesomeIcon icon={schema.fa_icon.split(' ')} /> : null;
+    const icon = schema.fa_icon ? <p className='icon'><FontAwesomeIcon icon={schema.fa_icon.split(' ')} /></p> : null;
 
     if (!schema.help_text) {
       return (
@@ -25,15 +25,6 @@ export const SchemField = (props: WrapIfAdditionalTemplateProps) => {
         </>
       );
     }
-    // if(schema.type === 'object' && schema.help_text) {
-    //   return (
-    //     <>
-    //       <HelpPopover schema={schema} />
-    //       {icon}
-    //       {children}
-    //     </>
-    //   );
-    // }
 
     return (
       <>
