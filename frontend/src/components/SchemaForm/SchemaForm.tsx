@@ -19,6 +19,7 @@ function SchemaForm(props: SchemaFormProps) {
         validator={validator}
         onSubmit={({ formData }) => props.onSubmit(formData)}
         templates={{ WrapIfAdditionalTemplate: SchemField }}
+        showErrorList='bottom'
       />
     </>
   );
